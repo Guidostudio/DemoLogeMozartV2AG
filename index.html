@@ -4,127 +4,123 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Loge W.A. Mozart - Vrijmetselarij in Hilversum</title>
-    <meta name="description" content="Loge W.A. Mozart in Hilversum. Een plek voor ontmoeting en persoonlijke ontwikkeling, met dialoog, symbolen en bouwstukken." />
-    <link rel="stylesheet" href="./style.css" />
+    <meta name="description" content="Ontmoeting en persoonlijke ontwikkeling bij Loge W.A. Mozart in Hilversum. Een moderne blik op een rijke traditie." />
+    <link rel="stylesheet" href="./style-v2.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Naar inhoud</a>
-
+    <div class="watermark-mozart"></div>
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="index.html" aria-label="Loge W.A. Mozart">
+        <a class="brand" href="#home" aria-label="Loge W.A. Mozart">
           Loge W.A. Mozart
         </a>
-        
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Menu openen">
-        <label for="menu-toggle" class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-
-        <nav class="nav-links" aria-label="Hoofdnavigatie">
-          <a href="wat-kun-je-van-ons-verwachten.html">Verwachtingen</a>
-          <a href="wat-is-vrijmetselarij.html">Over Vrijmetselarij</a>
-          <a href="bijeenkomsten.html">Bijeenkomsten</a>
+        <nav class="nav-links">
+          <a href="#verwachtingen">Verwachtingen</a>
+          <a href="#vrijmetselarij">Over ons</a>
+          <a href="#bijeenkomsten">Bijeenkomsten</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
-    <main id="main">
+    <main>
+      <!-- HERO -->
       <section class="hero" id="home">
         <div class="container">
-          <div class="hero-copy">
-            <span class="eyebrow">De vrijmetselarij in Hilversum</span>
-            <h1>Een plek voor ontmoeting & persoonlijke groei</h1>
-            <p class="lead">
-              Wij zoeken naar wat ons verbindt en nemen weg wat ons verdeelt. 
-              Een plek voor verdieping, dialoog en inzicht in een jachtige wereld.
-            </p>
+          <h1>Een plek voor ontmoeting & groei</h1>
+          <p class="lead">
+            In een jachtige wereld bieden wij een ruimte voor verdieping, dialoog en zelfreflectie. 
+            Zoekend naar wat verbindt.
+          </p>
+          <a href="#contact" class="btn-pill">Kom kennismaken</a>
+        </div>
+      </section>
 
-            <div class="cta-row">
-              <a class="btn btn-primary" href="#contact">Kom kennismaken</a>
-              <a class="btn btn-secondary" href="mailto:secretariaat@logemozart.nl">Neem contact op</a>
+      <!-- VERWACHTINGEN -->
+      <section class="section" id="verwachtingen">
+        <div class="container">
+          <h2>Wat kun je verwachten?</h2>
+          <div class="card-grid">
+            <div class="content-card">
+              <h3>Werken aan jezelf</h3>
+              <p>
+                Wij gebruiken de symboliek van de bouw om te werken aan onszelf als 'ruwe steen'. 
+                Persoonlijke ontwikkeling staat centraal in een veilige, besloten omgeving.
+              </p>
+            </div>
+            <div class="content-card">
+              <h3>Bouwstukken</h3>
+              <p>
+                Tijdens onze avonden presenteren leden zogenaamde 'bouwstukken': voordrachten over levensvragen of maatschappelijke thema's.
+              </p>
+            </div>
+            <div class="content-card">
+              <h3>De Comparitie</h3>
+              <p>
+                Na een bouwstuk volgt een dialoog. Geen debat met winnaars, maar een verkenning waarin we elkaars perspectief proberen te begrijpen.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="intro">
+      <!-- OVER VRIJMETSELARIJ -->
+      <section class="section" id="vrijmetselarij" style="background: rgba(0,0,0,0.02);">
+        <div class="container" style="max-width: 800px; text-align: center;">
+          <h2>Wat is de vrijmetselarij?</h2>
+          <p style="font-size: 1.15rem; color: #444; margin-bottom: 2rem;">
+            Het is een methode om betekenis te geven aan het leven. Geen dogma's, maar een eigen zoektocht.
+          </p>
+          <p style="margin-bottom: 2rem;">
+            De vrijmetselarij is een wereldwijde broederschap die gebruikmaakt van symbolen en rituelen om universele waarden als vrijheid, gelijkheid en broederschap vorm te geven.
+          </p>
+          <p>
+            Bij Loge W.A. Mozart doen we dit met een open vizier en respect voor ieders overtuiging.
+          </p>
+        </div>
+      </section>
+
+      <!-- BIJEENKOMSTEN -->
+      <section class="section" id="bijeenkomsten">
         <div class="container">
-          <div class="cards">
-            <article class="card">
-              <img class="tile-figure" src="VM2-23-cover-scaled-e1690297516389.jpg" alt="Bijeenkomst" loading="lazy">
-              <h3>Wat kun je van ons verwachten?</h3>
-              <p class="muted">
-                Werken met elkaar en aan jezelf, bouwstukken en een dialoog waarin alle vragen welkom zijn.
-              </p>
-              <br>
-              <a class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" href="wat-kun-je-van-ons-verwachten.html">Lees meer</a>
-            </article>
-
-            <article class="card">
-              <img class="tile-figure" src="free-walking-tour-salzburg-gmOg3PUPPwg-unsplash (1).jpg" alt="Vrijmetselarij" loading="lazy">
-              <h3>Wat is de vrijmetselarij?</h3>
-              <p class="muted">
-                Geen religie of politiek, maar een methode voor persoonlijke ontwikkeling met symbolen en rituelen.
-              </p>
-              <br>
-              <a class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" href="wat-is-vrijmetselarij.html">Ontdek meer</a>
-            </article>
-
-            <article class="card">
-              <div style="background: var(--accent); color: white; border-radius: var(--radius-sm); padding: 1.5rem; margin-bottom: 1.5rem;">
-                <p style="font-weight: 700; margin-bottom: 0.5rem;">Eerstvolgende bijeenkomst</p>
-                <p style="font-size: 1.25rem;">Dinsdag 14 april</p>
-                <p class="small" style="opacity: 0.8;">Avond voor belangstellenden</p>
-              </div>
-              <h3>Bijeenkomsten</h3>
-              <p class="muted">
-                Wekelijks op dinsdagavond (20.00-22.30) in ons logegebouw aan de Oude Enghweg.
-              </p>
-              <br>
-              <a class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" href="bijeenkomsten.html">Bekijk data</a>
-            </article>
+          <h2>Bijeenkomsten</h2>
+          <div class="card-grid">
+            <div class="content-card">
+              <h3>Wekelijkse Avonden</h3>
+              <p>Elke dinsdagavond van 20.00 tot 22.30 uur komen we samen in ons logegebouw.</p>
+            </div>
+            <div class="content-card">
+              <h3>Belangstellenden</h3>
+              <p>Op dinsdag 14 april organiseren we een speciale avond voor wie meer wil weten.</p>
+            </div>
+            <div class="content-card">
+              <h3>Locatie</h3>
+              <p>Oude Enghweg 19, Hilversum. Een historisch pand in het hart van de stad.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section band-dark" id="broeders">
+      <!-- CONTACT (SCREENSHOT MATCH) -->
+      <section class="section contact-section" id="contact">
         <div class="container">
-          <h2 style="text-align: center; margin-bottom: 3rem;">Broeders aan het woord</h2>
-          <div class="quote-grid">
-            <figure class="quote-card">
-              <blockquote>"Het verhaal van het werken aan een betere world dankzij een beter zelf sprak mij aan."</blockquote>
-            </figure>
-            <figure class="quote-card">
-              <blockquote>"De vrijmetselarij heeft voor mij een vliegwielfunctie in de evolutie van mijn moraliteit."</blockquote>
-            </figure>
-            <figure class="quote-card">
-              <blockquote>"Hier kun je de facade van onaantastbaarheid laten varen en echte kwetsbaarheid tonen."</blockquote>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact" id="contact">
-        <div class="container">
-          <h2 style="text-align: center; margin-bottom: 3rem;">Vragen of kennismaken?</h2>
+          <h2>Interesse? Neem contact op</h2>
+          
           <div class="contact-grid">
-            <div class="contact-card">
-              <p class="contact-label">E-mail</p>
-              <p class="contact-value" style="font-size: 1.2rem;">
-                <a href="mailto:secretariaat@logemozart.nl" style="color: var(--primary); text-decoration: none;">secretariaat@logemozart.nl</a>
-              </p>
-              <p class="small muted">We reageren doorgaans binnen enkele dagen.</p>
+            <!-- MAIL BOX -->
+            <div class="contact-box">
+              <span class="label">Mail</span>
+              <p class="value">secretariaat@logemozart.nl</p>
+              <br>
+              <a href="mailto:secretariaat@logemozart.nl" class="btn-pill">Kom kennismaken</a>
             </div>
 
-            <div class="contact-card">
-              <p class="contact-label">Locatie</p>
-              <p class="contact-value" style="font-size: 1.2rem;">Oude Enghweg 19, Hilversum</p>
-              <p class="small muted">Ons prachtige logegebouw in het hart van Hilversum.</p>
+            <!-- LOCATIE BOX -->
+            <div class="contact-box">
+              <span class="label">Locatie</span>
+              <p class="value">Oude Enghweg 19, Hilversum</p>
+              <p class="sub-label">Neem gerust contact op voor meer informatie.</p>
             </div>
           </div>
         </div>
@@ -135,31 +131,29 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <p class="footer-title">Loge W.A. Mozart</p>
-            <p class="small muted">
+            <h4>Loge W.A. Mozart</h4>
+            <p>
               Een democratische vereniging die streeft naar verdieping van inzicht en persoonlijke groei.
             </p>
           </div>
           <div>
-            <p class="footer-title">ANBI Informatie</p>
-            <p class="small muted">
-              RSIN: 816599965<br>
-              IBAN: NL22 INGB 0007 2269 00<br>
-              t.n.v. Loge W.A. Mozart
-            </p>
+            <h4>ANBI Informatie</h4>
+            <p>RSIN: 816599965</p>
+            <p>IBAN: NL22 INGB 0007 2269 00</p>
+            <p>t.n.v. Loge W.A. Mozart</p>
           </div>
           <div>
-            <p class="footer-title">Navigatie</p>
-            <ul style="list-style: none; padding: 0;" class="small">
-              <li><a href="index.html" style="color: inherit; text-decoration: none;">Home</a></li>
-              <li><a href="wat-kun-je-van-ons-verwachten.html" style="color: inherit; text-decoration: none;">Verwachtingen</a></li>
-              <li><a href="wat-is-vrijmetselarij.html" style="color: inherit; text-decoration: none;">Over ons</a></li>
-              <li><a href="bijeenkomsten.html" style="color: inherit; text-decoration: none;">Data</a></li>
+            <h4>Navigatie</h4>
+            <ul style="list-style: none;">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#verwachtingen">Verwachtingen</a></li>
+              <li><a href="#vrijmetselarij">Over ons</a></li>
+              <li><a href="#bijeenkomsten">Data</a></li>
             </ul>
           </div>
         </div>
-        <div style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); text-align: center;">
-          <p class="small muted">&copy; 2026 Loge W.A. Mozart Hilversum. Alle rechten voorbehouden.</p>
+        <div class="copyright">
+          <p>&copy; 2026 Loge W.A. Mozart Hilversum. Alle rechten voorbehouden.</p>
         </div>
       </div>
     </footer>
