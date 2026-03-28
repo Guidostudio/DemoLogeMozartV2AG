@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --bg: #f2f2f2; /* Soft gray, modern yet classic */
+  --bg: #f5f0e5; /* Deep Beige background for warmth */
   --surface: #ffffff;
-  --text: #1a1a1a;
-  --muted: #6b7280;
-  --accent: #111827;
-  --border: rgba(0, 0, 0, 0.06);
-  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.02);
+  --text: #0f172a; /* Marine Blue for trust and reflection */
+  --muted: #475569;
+  --accent: #0f172a; /* Marine Blue accent */
+  --accent-warm: #d97706; /* Terracotta for warm connection */
+  --accent-gold: #b48c36; /* Deep Gold for dignity */
+  --border: rgba(15, 23, 42, 0.1);
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
   --radius-lg: 40px;
   --radius-btn: 50px;
   --container: 1000px;
   --font-sans: 'Outfit', sans-serif;
   --font-serif: 'Playfair Display', serif;
+  --bg-sage: #eaddd0; /* Warmer earth tone */
 }
 
 * {
@@ -79,10 +82,10 @@ body::before {
   width: 100%;
   z-index: 1000;
   padding: 1rem 0;
-  background: rgba(242, 242, 242, 0.9); /* Matching --bg with transparency */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: rgba(245, 240, 229, 0.96); /* Matching deep beige */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 3px solid var(--accent-gold); /* Deep Gold line */
   transition: all 0.3s ease;
 }
 
@@ -141,6 +144,10 @@ body::after {
 /* Sections */
 .section {
   padding: 120px 0;
+}
+
+#vrijmetselarij {
+  background-color: var(--bg-sage); /* Reflective Sage Green */
 }
 
 h1, h2, h3 {
@@ -260,7 +267,7 @@ h2 {
 /* Pill Button */
 .btn-pill {
   display: inline-block;
-  background: var(--accent);
+  background: var(--accent-warm); /* Terracotta button */
   color: #fff;
   text-decoration: none;
   padding: 14px 28px;
@@ -268,13 +275,14 @@ h2 {
   font-size: 0.9rem;
   font-weight: 600;
   width: fit-content;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
   margin-top: auto; /* Push to bottom of flex container */
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
 }
 
 .btn-pill:hover {
-  opacity: 0.9;
-  transform: scale(1.02);
+  background: var(--accent-gold); /* Shifting to gold on hover */
+  transform: translateY(-2px);
 }
 
 /* Footer */
