@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --bg: #f5f0e5; /* Deep Beige background for warmth */
+  --bg: #f5f0e5;
+  /* Deep Beige background for warmth */
   --surface: #ffffff;
-  --text: #0f172a; /* Marine Blue for trust and reflection */
+  --text: #0f172a;
+  /* Marine Blue for trust and reflection */
   --muted: #475569;
-  --accent: #0f172a; /* Marine Blue accent */
-  --accent-warm: #d97706; /* Terracotta for warm connection */
-  --accent-gold: #b48c36; /* Deep Gold for dignity */
+  --accent: #0f172a;
+  /* Marine Blue accent */
+  --accent-warm: #d97706;
+  /* Terracotta for warm connection */
+  --accent-gold: #b48c36;
+  /* Deep Gold for dignity */
   --border: rgba(15, 23, 42, 0.1);
   --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
   --radius-lg: 40px;
@@ -15,7 +20,8 @@
   --container: 1000px;
   --font-sans: 'Outfit', sans-serif;
   --font-serif: 'Playfair Display', serif;
-  --bg-sage: #eaddd0; /* Warmer earth tone */
+  --bg-sage: #eaddd0;
+  /* Warmer earth tone */
 }
 
 * {
@@ -48,8 +54,10 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: var(--bg); /* Keep background color in the bottom layer */
-  opacity: 0.1; /* Stronger stone wall */
+  background-color: var(--bg);
+  /* Keep background color in the bottom layer */
+  opacity: 0.1;
+  /* Stronger stone wall */
   pointer-events: none;
   z-index: -2;
 }
@@ -64,7 +72,8 @@ body::before {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;
-  opacity: 0.45; /* High visibility as requested */
+  opacity: 0.45;
+  /* High visibility as requested */
   pointer-events: none;
   z-index: -1;
 }
@@ -82,15 +91,18 @@ body::before {
   width: 100%;
   z-index: 1000;
   padding: 1rem 0;
-  background: rgba(245, 240, 229, 0.96); /* Matching deep beige */
+  background: rgba(245, 240, 229, 0.96);
+  /* Matching deep beige */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 3px solid var(--accent-gold); /* Deep Gold line */
+  border-bottom: 3px solid var(--accent-gold);
+  /* Deep Gold line */
   transition: all 0.3s ease;
 }
 
 main {
-  padding-top: 80px; /* Prevent content from starting under the fixed header */
+  padding-top: 80px;
+  /* Prevent content from starting under the fixed header */
 }
 
 .nav {
@@ -110,7 +122,8 @@ body::after {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;
-  opacity: 0.35; /* Duidelijk as requested */
+  opacity: 0.35;
+  /* Duidelijk as requested */
   pointer-events: none;
   z-index: -1;
 }
@@ -119,7 +132,8 @@ body::after {
   text-decoration: none;
   color: var(--text);
   font-family: var(--font-serif);
-  font-size: 1.91rem; /* Groter as requested */
+  font-size: 1.91rem;
+  /* Groter as requested */
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -147,10 +161,13 @@ body::after {
 }
 
 #vrijmetselarij {
-  background-color: var(--bg-sage); /* Reflective Sage Green */
+  background-color: var(--bg-sage);
+  /* Reflective Sage Green */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-serif);
   letter-spacing: -0.01em;
 }
@@ -167,11 +184,13 @@ h2 {
   display: flex;
   align-items: center;
   text-align: center;
-  padding-top: 80px; /* navbar offset */
+  padding-top: 80px;
+  /* navbar offset */
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 8vw, 4.5rem); /* Slightly smaller as requested */
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  /* Slightly smaller as requested */
   line-height: 1.05;
   margin-bottom: 2rem;
 }
@@ -215,7 +234,8 @@ h2 {
 }
 
 .contact-section h2 {
-  font-family: var(--font-sans); /* Looks like Sans in screenshot */
+  font-family: var(--font-sans);
+  /* Looks like Sans in screenshot */
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 3rem;
@@ -267,7 +287,8 @@ h2 {
 /* Pill Button */
 .btn-pill {
   display: inline-block;
-  background: var(--accent-warm); /* Terracotta button */
+  background: var(--accent-warm);
+  /* Terracotta button */
   color: #fff;
   text-decoration: none;
   padding: 14px 28px;
@@ -276,12 +297,14 @@ h2 {
   font-weight: 600;
   width: fit-content;
   transition: all 0.2s ease;
-  margin-top: auto; /* Push to bottom of flex container */
+  margin-top: auto;
+  /* Push to bottom of flex container */
   box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
 }
 
 .btn-pill:hover {
-  background: var(--accent-gold); /* Shifting to gold on hover */
+  background: var(--accent-gold);
+  /* Shifting to gold on hover */
   transform: translateY(-2px);
 }
 
@@ -303,7 +326,8 @@ h2 {
   font-weight: 700;
 }
 
-.footer p, .footer li {
+.footer p,
+.footer li {
   font-size: 0.85rem;
   color: var(--muted);
   margin-bottom: 0.75rem;
@@ -323,16 +347,17 @@ h2 {
   .contact-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .nav-links {
-    display: none; /* Add hamburger if needed later */
+    display: none;
+    /* Add hamburger if needed later */
   }
-  
+
   .section {
     padding: 80px 0;
   }
