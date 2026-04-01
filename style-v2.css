@@ -188,11 +188,26 @@ h2 {
   /* navbar offset */
 }
 
-.hero h1 {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  /* Slightly smaller as requested */
-  line-height: 1.05;
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 2rem;
+}
+
+.hero-title .small-text {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--muted);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.hero-title .large-text {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
 }
 
 .lead {
@@ -225,6 +240,22 @@ h2 {
 .content-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1.25rem;
+}
+
+/* Card Color Palette */
+.card-blue { background-color: #eef2ff !important; border-color: #c7d2fe !important; }
+.card-purple { background-color: #f5f3ff !important; border-color: #ddd6fe !important; }
+.card-cream { background-color: #fffbeb !important; border-color: #fef3c7 !important; }
+.card-earth { background-color: #fff7ed !important; border-color: #ffedd5 !important; }
+
+/* Moss Section Styling */
+.bg-moss {
+  background-color: #f0f4f0 !important;
+}
+
+.bg-moss .content-card {
+  background-color: #e8ede8 !important;
+  border-color: #d1dad1 !important;
 }
 
 /* Contact Section (Matching Screenshot) */
@@ -481,4 +512,54 @@ h2 {
 
 .btn-read-more:hover {
   border-color: var(--accent-warm);
+}
+
+/* Brush Stroke Reveal Effect */
+.section {
+  position: relative;
+}
+
+.brush-stroke {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  filter: blur(10px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brush-stroke.active {
+  opacity: 0.6;
+  filter: blur(0);
+  transform: translateX(-50%) scale(1.2);
+}
+
+/* Masonic Colors for Brush Strokes */
+.brush-fire {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M0,10 Q25,0 50,10 T100,10' stroke='%23e11d48' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.brush-earth {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M0,8 Q20,15 40,5 T70,12 T100,8' stroke='%233f6212' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.brush-sky {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M0,12 Q30,2 60,15 T100,10' stroke='%230369a1' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.brush-sun {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M10,10 C30,0 70,20 90,10' stroke='%23b48c36' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.section h2 {
+  position: relative;
+  z-index: 1;
 }
