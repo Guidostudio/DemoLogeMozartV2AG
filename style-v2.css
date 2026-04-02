@@ -406,7 +406,7 @@ h2 {
 
 .video-frame {
   max-width: 525px;
-  margin: 0 auto;
+  margin: 3rem auto 0;
   border: 10px solid #c4a484; /* Soft light-brown earth tone */
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
@@ -514,52 +514,65 @@ h2 {
   border-color: var(--accent-warm);
 }
 
-/* Brush Stroke Reveal Effect */
-.section {
-  position: relative;
-}
-
+/* Basic Brush Stroke Settings */
 .brush-stroke {
   position: absolute;
-  top: 50px;
+  bottom: -30px; /* Fixed anchor beneath the text */
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
-  height: 80px;
+  width: 320px;
+  height: 90px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
-  opacity: 0;
   pointer-events: none;
-  filter: blur(10px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  mix-blend-mode: multiply; /* Removes white background */
+  opacity: 0.85; /* Authentic look */
 }
 
-.brush-stroke.active {
-  opacity: 0.6;
-  filter: blur(0);
-  transform: translateX(-50%) scale(1.2);
+/* Header Brand specific stroke */
+.brand-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
-/* Masonic Colors for Brush Strokes */
-.brush-fire {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M0,10 Q25,0 50,10 T100,10' stroke='%23e11d48' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+.brand-container .brush-stroke {
+  position: static;
+  transform: none;
+  width: 140px;
+  height: 35px;
+  margin-top: 5px;
+  filter: brightness(1.35) saturate(0.85); /* Lighter yellow as requested */
+  opacity: 0.7;
 }
 
-.brush-earth {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M0,8 Q20,15 40,5 T70,12 T100,8' stroke='%233f6212' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+/* Masonic Color Asset Mapping */
+.brush-scarlet {
+  background-image: url('Pennestreek Scharlaken rood.jpg');
+}
+
+.brush-brown {
+  background-image: url('Pennestreek aarde.jpg');
 }
 
 .brush-sky {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M0,12 Q30,2 60,15 T100,10' stroke='%230369a1' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url('Pennestreek luchtblauw.jpg');
 }
 
-.brush-sun {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M10,10 C30,0 70,20 90,10' stroke='%23b48c36' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+.brush-silver {
+  background-image: url('Pennestreek zilvergrijs.jpg');
 }
 
-.section h2 {
+.brush-yellow {
+  background-image: url('Pennestreek geel.jpg');
+}
+
+/* Relative containers are required so absolute-bottom positioning works */
+.section h2, .welcome-title, .hero-title {
   position: relative;
+  display: inline-block;
   z-index: 1;
-}
+}
