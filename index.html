@@ -15,12 +15,9 @@
   <div class="watermark-mozart"></div>
   <header class="site-header">
     <div class="container nav">
-      <div class="brand-container">
-        <a class="brand" href="#home" aria-label="Loge W.A. Mozart">
-          Loge W.A. Mozart
-        </a>
-        <div class="brush-stroke brush-yellow"></div>
-      </div>
+      <a class="brand" href="#home" aria-label="Loge W.A. Mozart">
+        Loge W.A. Mozart
+      </a>
       <nav class="nav-links">
         <a href="#over-ons">Over ons</a>
         <a href="#faq">FAQ</a>
@@ -37,7 +34,6 @@
         <h1 class="hero-title">
           <span class="small-text">Een plek voor</span>
           <span class="large-text">ontmoeting & groei</span>
-          <div class="brush-stroke brush-yellow"></div>
         </h1>
         <p class="lead">
           In een vluchtige wereld bieden wij een ruimte voor verdieping, dialoog en zelfreflectie.
@@ -50,7 +46,7 @@
     <!-- VIDEO SECTION -->
     <section class="video-section" style="padding: 60px 0 40px; text-align: center;">
       <div class="container">
-        <h2 class="welcome-title">Welkom bij Loge Mozart <div class="brush-stroke brush-yellow"></div></h2>
+        <h2 class="welcome-title">Welkom bij Loge Mozart</h2>
         <div class="video-frame">
           <video controls playsinline style="width: 100%; display: block; background: #000;">
             <source src="WhatsApp Video 2026-03-30 at 10.07.41.mp4" type="video/mp4">
@@ -63,8 +59,9 @@
 
     <!-- OVER VRIJMETSELARIJ -->
     <section class="section" id="over-ons">
+      <div class="brush-stroke brush-earth"></div>
       <div class="container" style="max-width: 1000px; text-align: center;">
-        <h2>Wat is de vrijmetselarij? <div class="brush-stroke brush-scarlet"></div></h2>
+        <h2>Wat is de vrijmetselarij?</h2>
         <p style="font-size: 1.15rem; color: #444; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
           Het een manier om betekenis te geven aan je leven. Geen dogma's, maar een eigen zoektocht. De vrijmetselarij is een wereldwijde broederschap die gebruikmaakt van symbolen en rituelen om universele waarden als vrijheid, gelijkwaardigheid en broederschap vorm te geven.
         </p>
@@ -108,8 +105,9 @@
 
     <!-- BIJEENKOMSTEN (FAQ) -->
     <section class="section bg-moss" id="faq">
+      <div class="brush-stroke brush-sky"></div>
       <div class="container">
-        <h2>FAQ <div class="brush-stroke brush-brown"></div></h2>
+        <h2>FAQ</h2>
         <div class="card-grid">
           <div class="content-card">
             <h3>Wekelijkse Avonden</h3>
@@ -133,8 +131,9 @@
 
     <!-- NIEUWS -->
     <section class="section" id="nieuws">
+      <div class="brush-stroke brush-fire"></div>
       <div class="container">
-        <h2 style="text-align: center;">Nieuws <div class="brush-stroke brush-sky"></div></h2>
+        <h2 style="text-align: center;">Nieuws</h2>
         <p style="text-align: center; color: var(--muted);">Blijf op de hoogte van onze activiteiten en publieke avonden.</p>
         <div style="margin-top: 3rem; text-align: center;">
           <div class="content-card" style="display: inline-block; max-width: 600px; text-align: left;">
@@ -147,8 +146,9 @@
 
     <!-- CONTACT -->
     <section class="section contact-section" id="contact">
+      <div class="brush-stroke brush-sun"></div>
       <div class="container">
-        <h2>Neem contact op <div class="brush-stroke brush-silver"></div></h2>
+        <h2>Interesse? Neem contact op</h2>
 
         <div class="contact-grid">
           <!-- MAIL BOX -->
@@ -231,6 +231,37 @@
         document.body.style.overflow = ''; // Restore scroll
       }
     }
+
+    // Brush Stroke Reveal Logic
+    document.querySelectorAll('.nav-links a, .footer a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+          const stroke = targetSection.querySelector('.brush-stroke');
+          if (stroke) {
+            // Reset others
+            document.querySelectorAll('.brush-stroke').forEach(s => s.classList.remove('active'));
+            // Trigger animation
+            setTimeout(() => {
+              stroke.classList.add('active');
+            }, 500); // Wait for scroll to settle
+          }
+        }
+      });
+    });
+
+    // Handle initial hash if present
+    window.addEventListener('load', () => {
+      if (window.location.hash) {
+        const targetSection = document.querySelector(window.location.hash);
+        if (targetSection) {
+          const stroke = targetSection.querySelector('.brush-stroke');
+          if (stroke) stroke.classList.add('active');
+        }
+      }
+    });
   </script>
 </body>
 
