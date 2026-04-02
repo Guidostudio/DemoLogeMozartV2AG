@@ -15,9 +15,12 @@
   <div class="watermark-mozart"></div>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="#home" aria-label="Loge W.A. Mozart">
-        Loge W.A. Mozart
-      </a>
+      <div class="brand-brush-wrapper">
+        <a class="brand" href="#home" aria-label="Loge W.A. Mozart">
+          Loge W.A. Mozart
+        </a>
+        <img src="Pennestreek geel.jpg" class="brand-brush-image" alt="">
+      </div>
       <nav class="nav-links">
         <a href="#over-ons">Over ons</a>
         <a href="#faq">FAQ</a>
@@ -31,10 +34,13 @@
     <!-- HERO -->
     <section class="hero" id="home">
       <div class="container">
-        <h1 class="hero-title">
-          <span class="small-text">Een plek voor</span>
-          <span class="large-text">ontmoeting & groei</span>
-        </h1>
+        <div class="hero-brush-wrapper">
+          <h1 class="hero-title">
+            <span class="small-text">Een plek voor</span>
+            <span class="large-text">ontmoeting & groei</span>
+          </h1>
+          <img src="Pennestreek geel.jpg" class="brush-image" alt="" style="max-width: 280px;">
+        </div>
         <p class="lead">
           In een vluchtige wereld bieden wij een ruimte voor verdieping, dialoog en zelfreflectie.
           Zoekend naar wat verbindt.
@@ -46,8 +52,11 @@
     <!-- VIDEO SECTION -->
     <section class="video-section" style="padding: 60px 0 40px; text-align: center;">
       <div class="container">
-        <h2 class="welcome-title">Welkom bij Loge Mozart</h2>
-        <div class="video-frame">
+        <div class="brush-container">
+          <h2 class="welcome-title">Welkom bij Loge Mozart</h2>
+          <img src="Pennestreek geel.jpg" class="brush-image" alt="" style="max-width: 280px;">
+        </div>
+        <div class="video-frame" style="margin-top: 3rem;">
           <video controls playsinline style="width: 100%; display: block; background: #000;">
             <source src="WhatsApp Video 2026-03-30 at 10.07.41.mp4" type="video/mp4">
             Je browser ondersteunt deze video niet.
@@ -59,9 +68,11 @@
 
     <!-- OVER VRIJMETSELARIJ -->
     <section class="section" id="over-ons">
-      <div class="brush-stroke brush-earth"></div>
       <div class="container" style="max-width: 1000px; text-align: center;">
-        <h2>Wat is de vrijmetselarij?</h2>
+        <div class="brush-container">
+          <h2>Wat is de vrijmetselarij?</h2>
+          <img src="Pennestreek Scharlaken rood.jpg" class="brush-image" alt="">
+        </div>
         <p style="font-size: 1.15rem; color: #444; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
           Het een manier om betekenis te geven aan je leven. Geen dogma's, maar een eigen zoektocht. De vrijmetselarij is een wereldwijde broederschap die gebruikmaakt van symbolen en rituelen om universele waarden als vrijheid, gelijkwaardigheid en broederschap vorm te geven.
         </p>
@@ -105,9 +116,11 @@
 
     <!-- BIJEENKOMSTEN (FAQ) -->
     <section class="section bg-moss" id="faq">
-      <div class="brush-stroke brush-sky"></div>
       <div class="container">
-        <h2>FAQ</h2>
+        <div class="brush-container">
+          <h2>FAQ</h2>
+          <img src="Pennestreek aarde.jpg" class="brush-image" alt="">
+        </div>
         <div class="card-grid">
           <div class="content-card">
             <h3>Wekelijkse Avonden</h3>
@@ -131,9 +144,11 @@
 
     <!-- NIEUWS -->
     <section class="section" id="nieuws">
-      <div class="brush-stroke brush-fire"></div>
       <div class="container">
-        <h2 style="text-align: center;">Nieuws</h2>
+        <div class="brush-container">
+          <h2 style="text-align: center;">Nieuws</h2>
+          <img src="Pennestreek luchtblauw.jpg" class="brush-image" alt="">
+        </div>
         <p style="text-align: center; color: var(--muted);">Blijf op de hoogte van onze activiteiten en publieke avonden.</p>
         <div style="margin-top: 3rem; text-align: center;">
           <div class="content-card" style="display: inline-block; max-width: 600px; text-align: left;">
@@ -146,9 +161,11 @@
 
     <!-- CONTACT -->
     <section class="section contact-section" id="contact">
-      <div class="brush-stroke brush-sun"></div>
       <div class="container">
-        <h2>Interesse? Neem contact op</h2>
+        <div class="brush-container">
+          <h2>Neem contact op</h2>
+          <img src="Pennestreek zilvergrijs.jpg" class="brush-image" alt="">
+        </div>
 
         <div class="contact-grid">
           <!-- MAIL BOX -->
@@ -231,37 +248,6 @@
         document.body.style.overflow = ''; // Restore scroll
       }
     }
-
-    // Brush Stroke Reveal Logic
-    document.querySelectorAll('.nav-links a, .footer a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        const targetId = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) {
-          const stroke = targetSection.querySelector('.brush-stroke');
-          if (stroke) {
-            // Reset others
-            document.querySelectorAll('.brush-stroke').forEach(s => s.classList.remove('active'));
-            // Trigger animation
-            setTimeout(() => {
-              stroke.classList.add('active');
-            }, 500); // Wait for scroll to settle
-          }
-        }
-      });
-    });
-
-    // Handle initial hash if present
-    window.addEventListener('load', () => {
-      if (window.location.hash) {
-        const targetSection = document.querySelector(window.location.hash);
-        if (targetSection) {
-          const stroke = targetSection.querySelector('.brush-stroke');
-          if (stroke) stroke.classList.add('active');
-        }
-      }
-    });
   </script>
 </body>
 
