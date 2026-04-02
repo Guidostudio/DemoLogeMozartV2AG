@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ - Loge W.A. Mozart</title>
+  <meta name="description" content="Veelgestelde vragen over de vrijmetselarij bij Loge W.A. Mozart in Hilversum." />
+  <link rel="stylesheet" href="./style-v2.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="watermark-mozart"></div>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand-brush-wrapper">
+        <a class="brand" href="index.html" aria-label="Loge W.A. Mozart">
+          Loge W.A. Mozart
+        </a>
+        <img src="Pennestreek geel.jpg" class="brand-brush-image" alt="">
+      </div>
+      <nav class="nav-links">
+        <a href="over-ons.html">Over ons</a>
+        <a href="faq.html">FAQ</a>
+        <a href="nieuws.html">Nieuws</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-quote-container">
+    <span class="page-quote">"Vragen zijn de sleutels tot verborgen kamers."</span>
+  </div>
+
+  <main>
+    <!-- BIJEENKOMSTEN (FAQ) -->
+    <section class="section bg-moss" id="faq" style="min-height: 80vh;">
+      <div class="container">
+        <div class="brush-container">
+          <h2>
+            FAQ
+            <span class="heading-quote">"Wie zichzelf kent, herkent de ander"</span>
+          </h2>
+          <img src="Pennestreek aarde.jpg" class="brush-image" alt="">
+        </div>
+        <div class="card-grid">
+          <div class="content-card">
+            <h3>Wekelijkse Avonden</h3>
+            <p>Elke dinsdagavond van 20.00 tot 22.30 uur komen we samen in ons logegebouw.</p>
+          </div>
+          <div class="content-card">
+            <h3>Belangstellenden</h3>
+            <p>Op dinsdag 14 april organiseren we een speciale avond voor wie meer wil weten.</p>
+          </div>
+          <div class="content-card">
+            <h3>Locatie</h3>
+            <p>Oude Enghweg 19, Hilversum. Een historisch pand in het hart van de stad.</p>
+          </div>
+          <div class="content-card" onclick="openFaq()" style="cursor: pointer;">
+            <h3>Feiten vs Fabels: FAQ complotdenkers</h3>
+            <p>Van complottheorieën naar een open dialoog over wat ons werkelijk bindt.</p>
+            <span class="btn-read-more">Ontdek de feiten...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Loge W.A. Mozart</h4>
+          <p>Een democratische vereniging die streeft naar verdieping van inzicht en persoonlijke groei.</p>
+        </div>
+        <div>
+          <h4>ANBI Informatie</h4>
+          <p>RSIN: 816599965</p>
+          <p>IBAN: NL22 INGB 0007 2269 00</p>
+          <p>t.n.v. Loge W.A. Mozart</p>
+        </div>
+        <div>
+          <h4>Navigatie</h4>
+          <ul style="list-style: none;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="nieuws.html">Nieuws</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Loge W.A. Mozart Hilversum. Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAQ MODAL -->
+  <div id="faqModal" class="modal faq-modal" onclick="closeFaq(event)">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeFaq(event)">&times;</span>
+      <h2 style="font-family: var(--font-serif); margin-bottom: 2rem;">Veelgestelde vragen over de vrijmetselarij</h2>
+      
+      <div class="faq-item">
+        <h4>Wat is de vrijmetselarij?</h4>
+        <p>De vrijmetselarij is een wereldwijde broederschap van mannen (en in sommige obediënties ook vrouwen) die zich richten op persoonlijke ontwikkeling, morele groei en wijsheid.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Wat is het doel van de vrijmetselarij?</h4>
+        <p>Het doel is om leden te helpen zichzelf te verbeteren, moreel en intellectueel door middel van zelfreflectie en filosofische discussies.</p>
+      </div>
+      <!-- Additional FAQ items can be added here -->
+    </div>
+  </div>
+
+  <script>
+    function openFaq() {
+      document.getElementById('faqModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeFaq(e) {
+      if (e === undefined || e.target.classList.contains('modal') || e.target.classList.contains('modal-close')) {
+        document.getElementById('faqModal').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
+</body>
+</html>

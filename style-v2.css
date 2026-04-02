@@ -146,7 +146,7 @@ body::after {
 .nav-links a {
   text-decoration: none;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1.15rem; /* Increased 2 sizes larger as requested */
   font-weight: 500;
   transition: color 0.2s ease;
 }
@@ -174,8 +174,39 @@ h3 {
 
 h2 {
   font-size: 2.25rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.5rem; /* Reduced to accommodate brush alignment exactly */
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Heading Quote Style */
+.heading-quote {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Top-Right Page Quote Style */
+.page-quote-container {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  text-align: right;
+  max-width: 250px;
+}
+
+.page-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--accent-gold);
 }
 
 /* Hero */
@@ -517,21 +548,25 @@ h2 {
 /* Physical Image Brushes (No SVGs) */
 .brush-container {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .brush-container h2 {
-  margin-bottom: -10px; /* Pull the brush up slightly towards the text */
+  margin-bottom: -5px; /* Tighter vertical connection */
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .brush-image {
   display: block;
   margin: 0 auto;
-  max-width: 320px;
+  width: 320px; /* Locked width for perfect vertical alignment across sections */
   height: auto;
-  mix-blend-mode: multiply; /* Removes the white background */
+  mix-blend-mode: multiply;
   opacity: 0.75;
   pointer-events: none;
   z-index: 1;
