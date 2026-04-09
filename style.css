@@ -133,7 +133,7 @@ body::after {
   position: absolute;
   width: 320px;
   height: 320px;
-  background-image: url('passer winkelhaak schets.jpeg');
+  background-image: url('Logo G sleutel Mozart.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.08;
@@ -197,10 +197,10 @@ h2 {
   margin-bottom: 1.5rem; /* Reduced to accommodate brush alignment exactly */
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 0;
 }
 
 /* Heading Quote Style */
@@ -608,6 +608,15 @@ h2 {
   transform: translateY(6px);
   pointer-events: none;
   opacity: 0.75;
+}
+
+.brand-masonic-image {
+  width: 45px;
+  height: auto;
+  mix-blend-mode: multiply;
+  transform: translateY(2px);
+  pointer-events: none;
+  opacity: 0.85;
 }
 
 /* Hero & Welcome Specific Brushes */
