@@ -17,12 +17,11 @@
           Loge W.A. Mozart
         </a>
         
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Menu openen">
-        <label for="menu-toggle" class="hamburger">
+        <div class="hamburger" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
-        </label>
+        </div>
 
         <nav class="nav-links" aria-label="Hoofdnavigatie">
           <a href="wat-kun-je-van-ons-verwachten.html">Verwachtingen</a>
@@ -125,5 +124,25 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector('.hamburger').classList.toggle('active');
+        document.querySelector('.nav-links').classList.toggle('active');
+        if (document.querySelector('.nav-links').classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.hamburger').classList.remove('active');
+          document.querySelector('.nav-links').classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    </script>
   </body>
 </html>
