@@ -57,8 +57,7 @@ body::before {
   background-size: cover;
   background-color: var(--bg);
   /* Keep background color in the bottom layer */
-  opacity: 0.1;
-  /* Stronger stone wall */
+  opacity: 0.15; /* Slightly stronger for more texture visibility */
   pointer-events: none;
   z-index: -2;
 }
@@ -512,6 +511,42 @@ h2 {
 
   .section {
     padding: 80px 0;
+    background: transparent !important; /* Ensure stone wall is visible throughout */
+  }
+
+  .hero {
+    background: transparent !important;
+  }
+
+  .watermark-mozart {
+    width: 80vw;
+    height: 80vw;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.15;
+  }
+
+  .watermark-masonic {
+    position: fixed; /* Keep symbols fixed behind content */
+    width: 250px;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.04; /* Lower opacity for subtle background effect */
+    z-index: -1;
+  }
+
+  .masonic-1 { top: 20%; }
+  .masonic-2 { top: 65%; left: 50% !important; }
+
+  .content-card {
+    background: rgba(255, 255, 255, 0.9) !important; /* Semi-transparent cards */
+    padding: 2rem 1.5rem;
+  }
+
+  .brush-image {
+    width: 260px; /* Slightly smaller for mobile to ensure no clipping */
   }
 }
 
