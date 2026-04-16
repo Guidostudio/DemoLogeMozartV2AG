@@ -52,10 +52,9 @@
           <img src="Pennestreek geel.jpg" class="brush-image" alt="" style="max-width: 280px;">
         </div>
         <p class="lead">
-          In een vluchtige wereld bieden wij ruimte voor verdieping, dialoog en zelfreflectie.
-          Zoekend naar wat ons verbindt.
+          Wegnemen wat ons van elkaar scheidt en zoekend naar wat ons verbindt.
         </p>
-        <a href="#contact" class="btn-pill">Kom kennismaken</a>
+
       </div>
     </section>
 
@@ -68,13 +67,19 @@
             <span class="heading-quote">"Bewustzijn is het licht waarmee wij onszelf leren zien."</span>
           </h2>
         </div>
-        <div class="video-frame" style="margin-top: 3rem;">
-          <video controls playsinline style="width: 100%; display: block; background: #000;">
+        <div class="video-frame" style="margin-top: 3rem; position: relative;">
+          <!-- Custom Poster Overlay -->
+          <div id="videoPoster" class="video-poster" onclick="playVideo()">
+            <div class="poster-watermark"></div>
+            <h3>Uitleg Vrijmetselarij</h3>
+            <div class="play-btn">▶</div>
+          </div>
+          <video id="mozartVideo" controls playsinline style="width: 100%; display: block; background: #000;">
             <source src="WhatsApp Video 2026-03-30 at 10.07.41.mp4" type="video/mp4">
             Je browser ondersteunt deze video niet.
           </video>
         </div>
-        <p class="video-caption" style="margin-top: 0.5rem; font-size: 0.9rem; color: #475569; font-style: italic;"></p>
+
       </div>
     </section>
 
@@ -107,9 +112,10 @@
           <div class="content-card card-purple">
             <h3>Bouwstukken</h3>
             <p>
-              Tijdens onze avonden presenteren leden zogenaamde 'bouwstukken': voordrachten over levensvragen of
+              Tijdens onze avonden presenteren leden zogenoemde 'bouwstukken': voordrachten over levensvragen of
               maatschappelijke thema's.
             </p>
+
           </div>
           <div class="content-card card-cream">
             <h3>De Comparitie</h3>
@@ -120,16 +126,20 @@
           </div>
           <div class="content-card card-earth">
             <h3>Broeders aan het woord</h3>
-            <p>
-              Hoor de verhalen van onze leden. Ervaar wat de vrijmetselarij voor eenieder persoonlijk betekent.
-            </p>
-            <span class="btn-read-more" onclick="openStory()">Lees meer...</span>
+            <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+              <img src="Foto Arjan 2026.jpg" alt="Arjan" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; filter: grayscale(100%); border: 2px solid var(--accent-gold);">
+              <div>
+                <p style="margin-bottom: 0.5rem; font-weight: 600;">Arjan aan het woord</p>
+                <p style="font-size: 0.95rem;">"Je kunt de façade van onaantastbaarheid laten varen, kwetsbaarheid tonen."</p>
+                <span class="btn-read-more" onclick="openStory()">Bekijk het volledige verhaal...</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- BIJEENKOMSTEN (FAQ) -->
+    <!-- FAQ & PROGRAMMA -->
     <section class="section bg-moss" id="faq">
       <div class="container">
         <div class="brush-container">
@@ -159,11 +169,11 @@
         <div class="brush-container section-title-small">
           <h2 style="text-align: center;">
             Nieuws
-            <span class="heading-quote">"Wijsheid groeit in de ruimte tussen woorden."</span>
+            <span class="heading-quote smaller-quote">"Wijsheid groeit in de ruimte tussen woorden"</span>
           </h2>
           <img src="Pennestreek luchtblauw.jpg" class="brush-image" alt="">
         </div>
-        <p style="text-align: center; color: var(--muted);">Blijf op de hoogte van onze activiteiten en publieke avonden.</p>
+
         <div style="margin-top: 3rem; text-align: center;">
           <div class="content-card" style="display: inline-block; max-width: 600px; text-align: left;">
             <h4>Open Dag 2026</h4>
@@ -178,19 +188,17 @@
       <div class="container">
         <div class="brush-container section-title-small">
           <h2>
-            Neem contact op
+            Contact
             <span class="heading-quote">"Ontmoeting is het begin van groei."</span>
           </h2>
-          <img src="Pennestreek zilvergrijs.brush-image" alt="">
+          <img src="Pennestreek zilvergrijs.jpg" class="brush-image" alt="">
         </div>
 
         <div class="contact-grid">
           <!-- MAIL BOX -->
           <div class="contact-box">
             <span class="label">Mail</span>
-            <p class="value">secretariaat@logemozart.nl</p>
-            <br>
-            <a href="mailto:secretariaat@logemozart.nl" class="btn-pill">Stuur bericht</a>
+            <p class="value"><a href="mailto:secretariaat@logemozart.nl" style="color: inherit; text-decoration: underline;">secretariaat@logemozart.nl</a></p>
           </div>
 
           <!-- LOCATIE BOX -->
@@ -335,6 +343,15 @@
       if (e === undefined || e.target.classList.contains('modal') || e.target.classList.contains('modal-close')) {
         document.getElementById('faqModal').classList.remove('active');
         document.body.style.overflow = ''; // Restore scroll
+      }
+    }
+
+    function playVideo() {
+      var poster = document.getElementById('videoPoster');
+      var video = document.getElementById('mozartVideo');
+      if (poster && video) {
+        poster.style.display = 'none';
+        video.play();
       }
     }
   </script>

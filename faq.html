@@ -139,6 +139,23 @@
     </div>
   </div>
 
+  <!-- STORY MODAL -->
+  <div id="storyModal" class="modal" onclick="closeStory(event)">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeStory(event)">&times;</span>
+      <img src="Foto Arjan 2026.jpg" alt="Arjan aan het woord">
+      <blockquote>"Je kunt de façade van onaantastbaarheid laten varen, kwetsbaarheid tonen."</blockquote>
+      <div class="story-body">
+        <p style="margin-bottom: 1.5rem;">
+          De bijdrage aan de persoonlijke ontwikkeling is een belangrijk onderwerp. Men ervaart dat op verschillende manieren: een toegenomen (h)erkenning van persoonlijke drijfveren, van je houding ten opzichte van anderen, een bewustwording van de fasen in je leven. Opvallend vaak wordt 'luisteren' genoemd: niet beoordelend of veroordelend, maar perspectief nemend en empathisch. Dat past men ook toe in het privé- en professionele leven. Vragen aan verhalen worden met respect gesteld en geven zowel de verteller als de luisteraar(s) vaak verrijkende of nieuwe inzichten.
+        </p>
+        <p>
+          Besprekingen van bouwstukken zijn geen debatten met winnaars en verliezers, maar positieve, letterlijk 'opbouwende' gesprekken waarin meningen er mogen zijn en gezamenlijk onderzocht worden.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <script>
     function toggleMenu() {
       document.querySelector('.hamburger').classList.toggle('active');
@@ -158,6 +175,18 @@
       });
     });
 
+    function openStory() {
+      document.getElementById('storyModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeStory(e) {
+      if (e === undefined || e.target.classList.contains('modal') || e.target.classList.contains('modal-close')) {
+        document.getElementById('storyModal').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
     function openFaq() {
       document.getElementById('faqModal').classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -169,5 +198,6 @@
       }
     }
   </script>
+
 </body>
 </html>
