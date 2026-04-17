@@ -136,7 +136,7 @@ body::after {
   background-image: url('Logo G sleutel Mozart.jpg');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.08;
+  opacity: 0.12; /* Helderder as requested */
   mix-blend-mode: multiply;
   pointer-events: none;
   z-index: -1;
@@ -370,7 +370,7 @@ h2 {
 }
 
 .contact-box .sub-label {
-  font-size: 0.85rem;
+  font-size: 1.05rem; /* Groter as requested */
   color: var(--muted);
   margin-bottom: 2rem;
 }
@@ -578,7 +578,6 @@ h2 {
 
 .indented-p {
   display: block;
-  margin-top: 1rem;
   text-indent: 2rem;
   text-align: left;
 }
