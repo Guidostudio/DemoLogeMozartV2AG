@@ -456,6 +456,11 @@ h2 {
     gap: 2rem;
   }
 
+  .indented-p {
+    text-indent: 0 !important;
+    display: inline !important;
+  }
+
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -579,7 +584,7 @@ h2 {
 .indented-p {
   display: block;
   text-indent: 2rem;
-  text-align: left;
+  text-align: inherit;
 }
 
 /* Video Poster Styles */
