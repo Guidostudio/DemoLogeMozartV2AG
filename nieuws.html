@@ -30,7 +30,7 @@
       </div>
       <nav class="nav-links">
         <a href="over-ons.html">Over ons</a>
-        <a href="faq.html">FAQ</a>
+        <a href="index.html#faq">FAQ</a>
         <a href="nieuws.html">Nieuws</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -92,6 +92,48 @@
       </div>
     </div>
   </footer>
+
+  <div id="faqModal" class="modal faq-modal" onclick="closeFaq(event)">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeFaq(event)">&times;</span>
+      <h2 style="font-family: var(--font-serif); margin-bottom: 2rem;">Veelgestelde vragen over de vrijmetselarij</h2>
+      
+      <div class="faq-item">
+        <h4>Wat is de vrijmetselarij?</h4>
+        <p>De vrijmetselarij is een wereldwijde broederschap van mannen (en in sommige obediënties ook vrouwen) die zich richten op persoonlijke ontwikkeling, morele groei en wijsheid. Het is een filosofische en ethische beweging die symboliek, rituelen en gemeenschapsvorming gebruikt om leden te helpen betere mensen te worden.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Wat is het doel van de vrijmetselarij?</h4>
+        <p>Het doel is om leden te helpen zichzelf te verbeteren, moreel en intellectueel. Dit gebeurt door middel van zelfreflectie, filosofische discussies en het nastreven van deugden zoals broederschap, waarheid, tolerantie en liefdadigheid.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Is de vrijmetselarij een religie?</h4>
+        <p>Nee, de vrijmetselarij is geen religie. Het is een filosofische en ethische organisatie die openstaat voor mensen van alle religies en overtuigingen. Vrij en zelf denken en daarover compareren krijgt hier de ruimte.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Wat gebeurt er tijdens een vrijmetselaarsbijeenkomst?</h4>
+        <p>Tijdens bijeenkomsten worden rituelen uitgevoerd, worden filosofische en morele thema’s besproken, en is er ruimte voor sociale interactie. De rituelen zijn symbolisch en bedoeld om leden te inspireren tot zelfreflectie en groei.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Hoe word je lid van de vrijmetselarij?</h4>
+        <p>Om lid te worden, moet je worden voorgedragen door een bestaand lid of door je aan te melden via deze site (contactformulier). Daarna volgt een proces van kennismaking en onderzoek. De vrijmetselarij zoekt mensen die oprecht geïnteresseerd zijn in persoonlijke groei en die zich willen inzetten voor de idealen van de organisatie.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Zijn er vrouwen toegestaan in deze vrijmetselarij?</h4>
+        <p>Onze vrijmetselarij is er alleen voor mannen, maar er bestaan ook gemengde en vrouwelijke obediënties (zoals de Orde van Weefsters-Vrijmetselares). In Nederland zijn er ook gemengde loges.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Wat is de relatie tussen de vrijmetselarij en de samenleving?</h4>
+        <p>Vrijmetselaren zetten zich vaak in voor liefdadigheid en maatschappelijke projecten. Ze streven naar een betere world door het bevorderen van tolerantie, verdraagzaamheid en ethisch handelen; zoeken naar wat ons verbindt en wegnemen wat ons scheidt.</p>
+      </div>
+    </div>
+  </div>
   <script>
     function toggleMenu() {
       document.querySelector('.hamburger').classList.toggle('active');
@@ -110,6 +152,17 @@
         document.body.style.overflow = '';
       });
     });
+
+    function openFaq() {
+      document.getElementById('faqModal').classList.add('active');
+      document.body.style.overflow = 'hidden'; 
+    }
+    function closeFaq(e) {
+      if (e === undefined || e.target.classList.contains('modal') || e.target.classList.contains('modal-close')) {
+        document.getElementById('faqModal').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
   </script>
 </body>
 </html>
