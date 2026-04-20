@@ -785,21 +785,35 @@ h2 {
   text-align: center;
 }
 
-.sub-header-seo-text {
+.seo-text-wrapper {
   position: absolute;
-  top: 6.5rem; /* ~100px total: Header (80px) + 1cm (~20px) */
-  right: 19rem; /* Perfectly aligned under the 'FAQ' link area */
+  top: 80px; /* Start directly below the 80px fixed header */
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.seo-text-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; /* Sync with main container padding */
+  display: flex;
+  justify-content: flex-end; /* Align right to match the nav-links */
+}
+
+.sub-header-seo-text {
+  margin-top: 15px; /* ~1cm below the header line */
+  margin-right: 18.5rem; /* Exactly aligned under the left side of the 'FAQ' link based on flex offsets */
   font-size: 1.25rem;
   color: var(--muted);
   font-family: var(--font-sans);
-  pointer-events: none;
-  z-index: 10; /* Below fixed header but above content */
   white-space: nowrap;
 }
 
 @media (max-width: 1100px) {
-  .sub-header-seo-text {
-    display: none; /* Hidden on smaller screens */
+  .seo-text-wrapper {
+    display: none; /* Hidden on smaller screens to prevent overlap */
   }
 }
 
