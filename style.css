@@ -31,15 +31,34 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; removed for instant jump-to-section as requested */
   overflow-x: hidden;
 }
 
+/* Accessibility: Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--accent-gold);
+  color: white;
+  padding: 10px 20px;
+  z-index: 2000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 body {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   color: var(--text);
   background-color: var(--bg);
-  line-height: 1.7;
+  line-height: 1.8; /* Increased for readability */
+  font-size: 1.15rem; /* Base size increase for 60-80 age group */
   overflow-x: hidden;
 }
 
@@ -136,10 +155,10 @@ body::after {
   background-image: url('Logo G sleutel Mozart.jpg');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.12; /* Helderder as requested */
+  opacity: 0.18; /* Increased visibility as requested */
   mix-blend-mode: multiply;
   pointer-events: none;
-  z-index: -1;
+  z-index: 1; /* Positive z-index to ensure visibility above background */
   filter: grayscale(100%) contrast(1.1);
 }
 
@@ -166,8 +185,9 @@ body::after {
 .nav-links a {
   text-decoration: none;
   color: var(--muted);
-  font-size: 1.15rem; /* Increased 2 sizes larger as requested */
+  font-size: 1.15rem;
   font-weight: 500;
+  padding: 10px 15px; /* Increase hit area for older users */
   transition: color 0.2s ease;
 }
 
@@ -182,6 +202,7 @@ body::after {
 /* Sections */
 .section {
   padding: 120px 0;
+  scroll-margin-top: 80px;
 }
 
 #vrijmetselarij {
@@ -191,9 +212,11 @@ body::after {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-serif);
   letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
 h2 {
@@ -382,11 +405,12 @@ h2 {
   /* Terracotta button */
   color: #fff;
   text-decoration: none;
-  padding: 14px 28px;
+  padding: 16px 32px; /* Increased padding for better touch target */
   border-radius: var(--radius-btn);
-  font-size: 0.9rem;
+  font-size: 1rem; /* Slightly larger */
   font-weight: 600;
   width: fit-content;
+  min-height: 48px; /* Standard minimum for accessible touch targets */
   transition: all 0.2s ease;
   margin-top: auto;
   /* Push to bottom of flex container */
@@ -752,6 +776,31 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* Base for absolute positioning of aside text */
+  width: 100%;
+}
+
+.heading-main {
+  width: 100%;
+  text-align: center;
+}
+
+.sub-header-seo-text {
+  position: absolute;
+  top: 6.5rem; /* ~100px total: Header (80px) + 1cm (~20px) */
+  right: 19rem; /* Perfectly aligned under the 'FAQ' link area */
+  font-size: 1.25rem;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  pointer-events: none;
+  z-index: 10; /* Below fixed header but above content */
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .sub-header-seo-text {
+    display: none; /* Hidden on smaller screens */
+  }
 }
 
 .brush-container h2 {
