@@ -1,10 +1,11 @@
-Review Agents.json
-Role: Senior UI/UX Designer
-Skills: HTML, CSS, JavaScript, Figma, Adobe Creative Suite
+# Project Regels & Rollen
+Dit project maakt gebruik van gespecialiseerde Agents en Skills om kwaliteit en consistentie te waarborgen.
 
-Review Skills.json
-Role: Senior Developer
-Skills: HTML, CSS, JavaScript, React, Node.js, Git
+## Algemene Regels (Altijd van kracht)
+- **NOOIT ongevraagd pushen naar GitHub.** Vraag ALTIJD eerst expliciet om toestemming zodat de wijzigingen gecontroleerd kunnen worden.
+- Gebruik de mappen `_agents` en `_skills` voor taakspecifieke richtlijnen.
 
-# Algemene Regels / General Rules
-- NOOIT ongevraagd pushen naar GitHub. Vraag ALTIJD eerst expliciet om toestemming zodat ik de wijzigingen eerst kan controleren. (NEVER push to GitHub without explicit permission.)
+## Rollen in dit Project
+- **Senior UI/UX Designer:** Bewaakt de visuele identiteit en premium uitstraling (zie `_agents/ui_designer.md`).
+- **Senior Developer:** Verantwoordelijk voor technische implementatie en workflow (zie `_agents/developer.md`).
+

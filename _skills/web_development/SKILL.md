@@ -1,8 +1,13 @@
 # Skill: Web Development & Git Workflow
-**Description:** Technische best-practices voor dit project.
+**Beschrijving:** Technische best-practices en workflow-regels voor dit project.
 
 ## Richtlijnen
-- **One-Pager:** Gebruik sectie ID's voor soepele navigatie (`#contact`, `#home`).
-- **Asset Management:** Afbeeldingen moeten in de root of een `assets/` map staan en correct getrackt worden in Git.
-- **Git:** Altijd `index.html` gebruiken als startpunt voor GitHub Pages. Backup oude versies als `index-old.html`.
-- **CSS:** Bij voorkeur external stylesheets (`style-v2.css`) gebruiken.
+- **One-Pager:** Gebruik sectie ID's (`#contact`, `#over-ons`) voor soepele navigatie en anchors.
+- **Responsive Design:** Mobile-first aanpak; controleer altijd de weergave op smartphones (email-links, footer spacing).
+- **Asset Management:** Afbeeldingen en watermerken worden bij voorkeur in de root beheerd. Gebruik Base64 alleen indien noodzakelijk voor performance.
+- **Bestandsbeheer:** De hoofdmap bevat de actieve `.html` bestanden. Oude versies verhuizen naar de `archive/` map.
+
+## Git Workflow
+1. **Toestemming:** Vraag ALTIJD toestemming voor een `git push`.
+2. **Commits:** Gebruik heldere, Nederlandstalige commit messages die de wijziging omschrijven.
+3. **Startpunt:** `index.html` is de primaire entry point voor GitHub Pages.

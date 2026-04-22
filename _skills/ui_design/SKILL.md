@@ -1,13 +1,20 @@
 # Skill: Premium Web Aesthetics (Mozart Style)
-**Description:** Richtlijnen voor de specifieke visuele stijl van de Loge W.A. Mozart website.
+**Beschrijving:** Richtlijnen voor de specifieke visuele stijl van de Loge W.A. Mozart website.
 
-## Kleurenpalet (Versterkt)
-- **Hoofdkleur:** Marineblauw (`#0f172a`) - Dieper en krachtiger voor bezinning en rust.
-- **Achtergrond:** Warm Beige (`#f5f0e5`) - Duidelijker aanwezig voor warmte en rust.
-- **Accenten:** 
-  - Diep Goud / Amber (`#b48c36`) - Voor een sterke, waardige verbinding.
-  - Terracotta / Zacht Oranje (`#d97706`) - Gebruikt voor actieknoppen voor maximale 'warmte'.
-- **Typografie:**
-  - Koppen: **Playfair Display** in Marineblauw.
-  - Knoppen: **Terracotta** voor een gastvrije uitstraling.
-- **Kruisverwijzing:** Zie `index-v2.html` en `style-v2.css` voor de huidige implementatie.
+## Visuele Kernwaarden
+- **Minimalisme:** Geen overbodige decoraties; witruimte (of beige-ruimte) is essentieel.
+- **Historisch modern:** Een balans tussen klassieke vrijmetselaars-symboliek en een strakke, moderne web-ervaring.
+
+## Kleurenpalet
+- **Hoofdkleur:** Marineblauw (`#0f172a`) - Voor tekst en koppen.
+- **Achtergrond:** Warm Beige (`#f5f0e5`) - Voor de basis-secties.
+- **Accent:** Diep Goud / Amber (`#b48c36`) - Voor lijnen en iconen.
+- **CTA:** Terracotta (`#d97706`) - Exclusief voor actieknoppen.
+
+## Typografie
+- **Koppen:** `Playfair Display` (Serif) - Elegant en statig.
+- **Body:** `Outfit` (Sans-serif) - Voor leesbaarheid op schermen.
+
+## Watermerken
+- Gebruik lage opacity (0.05 - 0.1) voor de `stone-wall-watermark.jpg`.
+- Het Mozart portret moet subtiel aanwezig zijn, nooit storend voor de tekst.
